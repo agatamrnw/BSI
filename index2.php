@@ -36,6 +36,11 @@ if(!isset($_SESSION["islogged"])){
                         <option value="Wroclaw" selected>Wrocław</option>
                     </select>
                 </div> 
+
+                <div class="prawo"> 
+                <label>Prawko </label>
+                    <input name="dl" type="checkbox" value="checked">
+                </div>
                 <div class="tel" >
                     <input name="Tel" type="tel" class="form tel _req" placeholder="Telefon(xxxxxxxxx)" value="000000000">
                 </div>
@@ -45,14 +50,8 @@ if(!isset($_SESSION["islogged"])){
                     <input name="Pesel" class="form pesel _req" type="text" value="00000000000">
                 </div>
                 <div class="pcode" >
-                    <input name="Code" class="form code _req" placeholder="Kod pocztowy(xx-xxx)" >
+                    <input name="Code" class="form code _req" placeholder="Kod pocztowy(xx-xxx)" value="02-787">
                 </div>
-                <?php
-                    if (!empty($_POST['Code'])){
-                        $code=$_POST['Code'];
-                        echo ($code);
-                    }
-                ?>
                 <div class="btns">
                     <button type="submit" class="btn sbmt">Submit</button>
                     <button type="reset" class="btn rst">Reset</button>
